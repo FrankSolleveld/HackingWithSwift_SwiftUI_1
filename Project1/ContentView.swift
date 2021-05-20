@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var tapCount = 0
     var body: some View {
-        Form {
-            Section {
-                Text("Hello, world!")
-                Text("Hello, world!")
+        NavigationView {
+            Form {
+                Section {
+                    Text("Hello, world!")
+                }
             }
-            Section {
-                Text("Hello, world!")
-                Text("Hello, world!")
-                Text("Hello, world!")
+            Button("Tap Count \(tapCount)") {
+                self.tapCount += 1
             }
+            .navigationTitle("SwiftUI")
         }
-        
     }
 }
 
